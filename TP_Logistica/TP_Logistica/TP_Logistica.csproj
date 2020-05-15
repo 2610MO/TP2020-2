@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98BDA35D-95D9-4675-BF0D-920E73061674}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TP_Logistica</RootNamespace>
+    <AssemblyName>TP_Logistica</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_unam_orito.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\ClienteBLL.cs" />
+    <Compile Include="BLL\ServicioBLL.cs" />
+    <Compile Include="BLL\UnidadBLL.cs" />
+    <Compile Include="BLL\UsuarioBLL.cs" />
+    <Compile Include="DAL\ClienteDAL.cs" />
+    <Compile Include="DAL\conexionDAL.cs" />
+    <Compile Include="DAL\IniciaSesionDAL.cs" />
+    <Compile Include="DAL\PermisosDAL.cs" />
+    <Compile Include="DAL\ServicioDAL.cs" />
+    <Compile Include="DAL\UnidadDAL.cs" />
+    <Compile Include="DAL\UsuarioDAL.cs" />
+    <Compile Include="FormInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInicioSesion.Designer.cs">
+      <DependentUpon>FormInicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FormAgregarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FormAgregarCliente.designer.cs">
+      <DependentUpon>FormAgregarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FormAgregarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FormAgregarServicio.designer.cs">
+      <DependentUpon>FormAgregarServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FormAgregarUnidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FormAgregarUnidad.designer.cs">
+      <DependentUpon>FormAgregarUnidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FormAgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FormAgregarUsuario.Designer.cs">
+      <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FormClientes.designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FormLogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FormLogo.designer.cs">
+      <DependentUpon>FormLogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuPrincipal.designer.cs">
+      <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FormServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FormServicios.designer.cs">
+      <DependentUpon>FormServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FormUnidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FormUnidades.designer.cs">
+      <DependentUpon>FormUnidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormInicioSesion.resx">
+      <DependentUpon>FormInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FormAgregarCliente.resx">
+      <DependentUpon>FormAgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FormAgregarServicio.resx">
+      <DependentUpon>FormAgregarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FormAgregarUnidad.resx">
+      <DependentUpon>FormAgregarUnidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FormAgregarUsuario.resx">
+      <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FormLogo.resx">
+      <DependentUpon>FormLogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuPrincipal.resx">
+      <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FormServicios.resx">
+      <DependentUpon>FormServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FormUnidades.resx">
+      <DependentUpon>FormUnidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo_unam_orito.ico" />
+    <Content Include="Resources\89739841_10212938035084427_7475325119091441664_o.jpg" />
+    <Content Include="Resources\APs.PNG" />
+    <Content Include="Resources\boss_man-128.png" />
+    <Content Include="Resources\cerrar.png" />
+    <Content Include="Resources\clientes.png" />
+    <Content Include="Resources\Close.png" />
+    <Content Include="Resources\compras.png" />
+    <Content Include="Resources\CREARCAMION.jpg" />
+    <Content Include="Resources\Dashboard.png" />
+    <Content Include="Resources\empleados.png" />
+    <Content Include="Resources\icon cerrar2.png" />
+    <Content Include="Resources\icon maximizar.png" />
+    <Content Include="Resources\icon minimizar.png" />
+    <Content Include="Resources\icon restaurar.png" />
+    <Content Include="Resources\icono-cliente.png" />
+    <Content Include="Resources\IMO2.png" />
+    <Content Include="Resources\logoUI.png" />
+    <Content Include="Resources\logoUI2.png" />
+    <Content Include="Resources\logo_unam_orito.ico" />
+    <Content Include="Resources\logo_unam_oro.png" />
+    <Content Include="Resources\marca.png" />
+    <Content Include="Resources\maxi.png" />
+    <Content Include="Resources\maximize.png" />
+    <Content Include="Resources\maximize2.png" />
+    <Content Include="Resources\maximize3.png" />
+    <Content Include="Resources\Membresia.PNG" />
+    <Content Include="Resources\menu.png" />
+    <Content Include="Resources\menu2.png" />
+    <Content Include="Resources\minimazar.png" />
+    <Content Include="Resources\Minimize.png" />
+    <Content Include="Resources\Minimize1.png" />
+    <Content Include="Resources\Mobile-Menu-Icon.png" />
+    <Content Include="Resources\new logo.png" />
+    <Content Include="Resources\new logo1.png" />
+    <Content Include="Resources\new logo2.png" />
+    <Content Include="Resources\new logo3.png" />
+    <Content Include="Resources\new logo4.png" />
+    <Content Include="Resources\new logo5.png" />
+    <Content Include="Resources\Normal.png" />
+    <Content Include="Resources\pagos.png" />
+    <Content Include="Resources\perfil.png" />
+    <Content Include="Resources\Planes.PNG" />
+    <Content Include="Resources\prodcutos.png" />
+    <Content Include="Resources\reloj.png" />
+    <Content Include="Resources\reportes.png" />
+    <Content Include="Resources\res.png" />
+    <Content Include="Resources\salir.png" />
+    <Content Include="Resources\satellite-dish.png" />
+    <Content Include="Resources\satellite_dish__1_1.png" />
+    <Content Include="Resources\shut-down.png" />
+    <Content Include="Resources\unidadespng.png" />
+    <Content Include="Resources\venta.png" />
+    <Content Include="Resources\ventas.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
